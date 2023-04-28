@@ -156,11 +156,14 @@
 <!--                </a>-->
 <!--              </li>-->
 
-              <li class="nav-item dropdown dropdown-hover mx-2">
+              <li class="nav-item dropdown dropdown-hover mx-2" >
                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                   data-bs-toggle="modal" data-bs-target="#editProfileModal" >
-                  <i class="material-icons opacity-6 me-2 text-md">edit</i>
-                  Edit Profile
+                   data-bs-toggle="modal" data-bs-target="#chartModel" >
+                  <a href="#" data-toggle="modal" data-target="#chartModal">
+                    <span> <i class="material-icons opacity-6">add_shopping_cart</i>  </span>
+                  </a>
+
+
                 </a>
               </li>
 
@@ -218,6 +221,7 @@
 
 
 
+
               <li class="nav-item dropdown dropdown-hover mx-2">
                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                 >
@@ -232,14 +236,18 @@
 
           </div>
         </div>
+        <!--panier-->
+        <!--span class="material-icons" style="font-size: 32px; color: rgb(0, 0, 128); text-shadow: rgb(229, 215, 215) -8.2px 0.1px 10px;">shopping_cart</span-->
+
+        <!--end panier-->
       </nav>
 
     </div>
   </div>
 </div>
 
-<router-outlet></router-outlet>
 
+<router-outlet></router-outlet>
 
 <footer class="footer py-5 bg-gradient-dark position-relative overflow-hidden">
   <img src="../../assets/front/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-1" loading="lazy">
@@ -320,3 +328,32 @@
     </div>
   </div>
 </footer>
+
+
+
+
+
+
+
+
+
+<!-- Modal Chart -->
+<div class="modal fade" id="chartModel" tabindex="-1" aria-labelledby="chartModel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <br><br>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn bg-gradient-dark mb-0" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn bg-gradient-primary mb-0">Order now</button>
+        <button type="button" class="btn bg-gradient-primary mb-0">View all</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Chart -->
