@@ -8,6 +8,7 @@ import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import {HomeBackComponent} from "./home-back/home-back.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
+import { MeilleuremployeComponent } from './back-office/meilleuremploye/meilleuremploye.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {HomeFrontComponent} from "./home-front/home-front.component";
     HomeForumComponent,
     HomeBackComponent,
     HomeFrontComponent,
+    MeilleuremployeComponent,
 
   ],
   imports: [
