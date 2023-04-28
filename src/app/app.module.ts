@@ -9,6 +9,14 @@ import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import {HomeBackComponent} from "./home-back/home-back.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
+import { AllproductComponent } from './Product/allproduct/allproduct.component';
+import { DetailproductComponent } from './Product/detailproduct/detailproduct.component';
+import { HttpClientModule} from "@angular/common/http";
+import { BackproductComponent } from './Product/backproduct/backproduct.component';
+import { AddproductComponent } from './Product/addproduct/addproduct.component';
+import { AdmindetailComponent } from './Product/admindetail/admindetail.component';
+
+
 
 import { ChatComponent } from './Forum/chat/chat.component';
 import {FormsModule} from "@angular/forms";
@@ -29,6 +37,13 @@ import { ModifyUsersBackComponent } from './User/modify-users-back/modify-users-
     HomeForumComponent,
     HomeBackComponent,
     HomeFrontComponent,
+    AllproductComponent,
+    DetailproductComponent,
+    BackproductComponent,
+    AddproductComponent,
+    AdmindetailComponent,
+    
+
 
     ChatComponent,
 
@@ -41,10 +56,8 @@ import { ModifyUsersBackComponent } from './User/modify-users-back/modify-users-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-
+    HttpClientModule
     FormsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
