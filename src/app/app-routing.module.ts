@@ -5,6 +5,7 @@ import {HomeForumComponent} from "./Forum/home-forum/home-forum.component";
 import {FrontOfficeComponent} from "./front-office/front-office.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
 import {HomeBackComponent} from "./home-back/home-back.component";
+import {ChatComponent} from "./Forum/chat/chat.component";
 
 const routes: Routes = [
   {path:'admin',component:BackOfficeComponent,
@@ -15,6 +16,8 @@ const routes: Routes = [
   {path:'',component:FrontOfficeComponent,
     children: [
       {path: '', component:HomeFrontComponent},
+      {path: 'Forum', component:HomeForumComponent},
+      {path: 'Chat', component:ChatComponent},
 
     ]
   },

@@ -8,6 +8,9 @@ import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import {HomeBackComponent} from "./home-back/home-back.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
+import {HttpClientModule} from "@angular/common/http";
+import { ChatComponent } from './Forum/chat/chat.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,11 +21,14 @@ import {HomeFrontComponent} from "./home-front/home-front.component";
     HomeForumComponent,
     HomeBackComponent,
     HomeFrontComponent,
+    ChatComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
