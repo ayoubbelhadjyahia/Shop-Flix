@@ -8,6 +8,13 @@ import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import {HomeBackComponent} from "./home-back/home-back.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
+import {HttpClientModule} from "@angular/common/http";
+import {CommandeComponent} from "./commande/commande.component";
+import { CartComponent } from './cart/cart.component';
+import { FactureComponent } from './facture/facture.component';
+import { CartbackComponent } from './cartback/cartback.component';
+import { FacturebackComponent } from './factureback/factureback.component';
+import { CommandebackComponent } from './commandeback/commandeback.component';
 
 
 @NgModule({
@@ -18,11 +25,19 @@ import {HomeFrontComponent} from "./home-front/home-front.component";
     HomeForumComponent,
     HomeBackComponent,
     HomeFrontComponent,
+    CommandeComponent,
+    CartComponent,
+    FactureComponent,
+    CartbackComponent,
+    FacturebackComponent,
+    CommandebackComponent,
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

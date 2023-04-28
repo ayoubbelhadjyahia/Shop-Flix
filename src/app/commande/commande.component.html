@@ -1,0 +1,140 @@
+<!-- -------- START HEADER 2 w/ waves and typed text ------- -->
+<header class="position-relative">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-absolute bg-transparent shadow-none">
+    <div class="container">
+      <a class="navbar-brand text-white" href="javascript:;">Material Design</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header-2" aria-controls="navbar-header-2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-header-2">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="javascript:;">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="javascript:;">
+              About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="javascript:;">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://twitter.com/CreativeTim">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white mx-2" href="https://www.facebook.com/CreativeTim">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://www.instagram.com/CreativeTimOfficial">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header min-vh-45" style="background-image: url(/assets/front/img/bg0.jpg);" loading="lazy">
+    <span class="mask bg-gradient-info opacity-4"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white"> <span class="text-white" id="typed"></span></h1>
+          <div id="typed-strings">
+          </div>
+          <p class="lead text-white text-center pe-5 mt-4"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- -------- END HEADER 2 w/ waves and typed text ------- -->
+
+<!-- Mandatory init script -->
+<script>
+  if (document.getElementById("typed")) {
+    var typed = new Typed("#typed", {
+      stringsElement: "#typed-strings",
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 200,
+      startDelay: 500,
+      loop: true
+    });
+  }
+</script>
+
+
+
+
+<div class="page-header">
+  <div class="position-absolute fixed-top ms-auto w-50 h-100 rounded-3 z-index-0 d-none d-sm-none d-md-block me-n4" style="background-color:white; background-size: cover;">
+  </div>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-7 d-flex justify-content-center flex-column">
+        <div class="card card-body d-flex justify-content-center shadow-lg p-5 blur align-items-center">
+          <h3 class="text-center">YOUR ORDER</h3>
+          <form role="form" id="contact-form" method="post" autocomplete="off">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="input-group input-group-static mb-4">
+                    <label>First Name</label>
+                    <input class="form-control" placeholder="eg. Arbi" aria-label="First Name..." type="text">
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <div class="input-group input-group-static">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" placeholder="eg. Ahmed" aria-label="Last Name...">
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <div class="input-group input-group-static">
+                    <label>Your Adress</label>
+                    <input type="text" class="form-control" placeholder="eg. Tunis" aria-label="Adress...">
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <div class="input-group input-group-static">
+                    <label>Your Phone Number</label>
+                    <input type="text" class="form-control" placeholder="eg. +21687365952" aria-label="Number...">
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="input-group input-group-static">
+                  <label>Date</label>
+                  <input type="date" class="form-control" placeholder="date">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-check form-switch d-flex align-items-center mb-4">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                    <label class="form-check-label ms-3 mb-0" for="flexSwitchCheckDefault">I agree to the <a href="javascript:;" class="text-dark"><u>Terms and Conditions</u></a>.</label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="btn bg-gradient-dark w-100">Confirm my order</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
