@@ -11,6 +11,7 @@ export class HomeBackComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
