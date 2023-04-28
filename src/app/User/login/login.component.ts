@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from "../../Services/UserServices/login.service";
-import {UserService} from "../../Services/UserServices/user.service";
+import {LoginService} from "../../Service/UserServices/login.service";
+import {UserService} from "../../Service/UserServices/user.service";
 import {Router} from "@angular/router";
 
 
