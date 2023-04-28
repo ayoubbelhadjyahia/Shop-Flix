@@ -9,10 +9,15 @@ import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import {HomeBackComponent} from "./home-back/home-back.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
+
+import { ChatComponent } from './Forum/chat/chat.component';
+import {FormsModule} from "@angular/forms";
+
 import { LoginComponent } from './User/login/login.component';
 import { RetrieveUsersBackComponent } from './User/retrieve-users-back/retrieve-users-back.component';
 import { ModifyUsersBackComponent } from './User/modify-users-back/modify-users-back.component';
-import {FormsModule} from "@angular/forms";
+
+
 
 
 
@@ -24,16 +29,22 @@ import {FormsModule} from "@angular/forms";
     HomeForumComponent,
     HomeBackComponent,
     HomeFrontComponent,
+
+    ChatComponent,
+
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
