@@ -5,12 +5,22 @@ import {HomeForumComponent} from "./Forum/home-forum/home-forum.component";
 import {FrontOfficeComponent} from "./front-office/front-office.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
 import {HomeBackComponent} from "./home-back/home-back.component";
+
 import {ChatComponent} from "./Forum/chat/chat.component";
+import {RetrieveUsersBackComponent} from "./User/retrieve-users-back/retrieve-users-back.component";
+import {ModifyUsersBackComponent} from "./User/modify-users-back/modify-users-back.component";
+import {LoginComponent} from "./User/login/login.component";
+
 
 const routes: Routes = [
+  {path:'Login',component:LoginComponent},
   {path:'admin',component:BackOfficeComponent,
     children: [
       {path: '', component:HomeBackComponent},
+      {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
+      {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+
+
     ]
   },
   {path:'',component:FrontOfficeComponent,
@@ -21,6 +31,7 @@ const routes: Routes = [
 
     ]
   },
+
 
 ];
 

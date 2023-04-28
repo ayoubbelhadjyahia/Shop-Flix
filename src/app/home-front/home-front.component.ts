@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthInterceptor} from "../auth.interceptor";
+import {UserService} from "../Services/UserServices/user.service";
+import {user} from "../Models/User";
 
 @Component({
   selector: 'app-home-front',
@@ -8,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeFrontComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+
+
   }
 
 }
