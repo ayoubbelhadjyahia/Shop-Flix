@@ -8,6 +8,11 @@ import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import {HomeBackComponent} from "./home-back/home-back.component";
 import {HomeFrontComponent} from "./home-front/home-front.component";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { LivraisonComponent } from './livraison/livraison.component';
+import { LivraisonService } from './livraison.service';
+import { AllLivraisonComponent } from './all-livraison/all-livraison.component';
 
 
 @NgModule({
@@ -18,13 +23,18 @@ import {HomeFrontComponent} from "./home-front/home-front.component";
     HomeForumComponent,
     HomeBackComponent,
     HomeFrontComponent,
+    LivraisonComponent,
+    AllLivraisonComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    
   ],
-  providers: [],
+  providers: [LivraisonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
