@@ -18,7 +18,7 @@
                             </div>
     </div>
     </div>
-    
+
 <div class="container">
 <div class="container">
     <div class="row col-md-6 col-md-offset-2 custyle">
@@ -42,7 +42,7 @@
             <td>{{Livraison.mail}}</td>
             <td>{{Livraison.numerotel}}</td>
             <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delete(Livraison.idLivraison)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
-            <td><button (click)="updateDelivery(Livraison)">Modifier</button></td> 
+            <td><button (click)="updateDelivery(Livraison)">Modifier</button></td>
           </tr>
     </tbody>
     </table>
@@ -67,31 +67,31 @@
 
 
             <div class="form-group">
-                <label for="email "><span class="req">* Email :</span> Email: </label>
+                <label ><span class="req">* Email :</span> Email: </label>
                 <input class="form-control" type="text" [(ngModel)]="Livraison.mail" name="email" id="txt" required
                     placeholder="Enter valid email address" />
                 <div id="errFirst"></div>
             </div>
 
             <div class="form-group">
-                <label for="lastname"><span class="req"> * Recipient's lastname:</span> Recipient's lastname: </label>
-                <input class="form-control" type="text" [(ngModel)]="Livraison.nomdestinataire" name="nomdestinataire" id="txt"
+                <label ><span class="req"> * Recipient's lastname:</span> Recipient's lastname: </label>
+                <input class="form-control" type="text" [(ngModel)]="Livraison.nomdestinataire" name="nomdestinataire" id="txta"
                     placeholder="Total year of experience" required />
                 <div id="errLast"></div>
             </div>
 
             <div class="form-group">
-                <label for="firstname"><span class="req"> * Recipient's firstname :  </span> Recipient's firstname : </label>
+                <label ><span class="req"> * Recipient's firstname :  </span> Recipient's firstname : </label>
                 <input class="form-control" required type="text" [(ngModel)]="Livraison.prenomdestinataire" name="prenomdestinataire"
                     id="email" placeholder="fullstack/backend/developer" />
                 <div class="status" id="status"></div>
             </div>
 
             <div class="form-group">
-                <label for="phonenum"><span class="req">* Phone number : </span> Phone number : </label>
-                <input class="form-control" type="number" [(ngModel)]="Livraison.numerotel" name="Numero" id="txt"
+                <label ><span class="req">* Phone number : </span> Phone number : </label>
+                <input class="form-control" type="number" [(ngModel)]="Livraison.numerotel" name="Numero" id="txtt"
                     placeholder="Total year of experience" required />
-                <div id="errLast"></div>
+                <div id="errLastt"></div>
             </div>
 
             <div class="form-group">
@@ -100,6 +100,7 @@
         </fieldset>
     </form>
 </div>
-    
+
     </div>
+</div>
 </div>

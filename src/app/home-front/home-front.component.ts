@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthInterceptor} from "../auth.interceptor";
-import {UserService} from "../Services/UserServices/user.service";
-import {user} from "../Models/User";
+import {UserService} from "../Service/UserServices/user.service";
+import {user} from "../Model/User/User";
 
 @Component({
   selector: 'app-home-front',

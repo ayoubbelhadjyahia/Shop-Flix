@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {panier} from "../../../../../../ANGULARPI/Shop-Flix/src/app/model/PanierR/panier";
 import {HttpClient} from "@angular/common/http";
+import {panier} from "../../Model/PanierR/panier";
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {user} from "../../Models/User";
+import {user} from "../../Model/User/User";
 import {AuthInterceptor} from "../../auth.interceptor";
 
 
