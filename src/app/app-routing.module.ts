@@ -11,13 +11,23 @@ import {BackproductComponent} from "./Product/backproduct/backproduct.component"
 import {AddproductComponent} from "./Product/addproduct/addproduct.component";
 import {AdmindetailComponent} from "./Product/admindetail/admindetail.component";
 
+import {ChatComponent} from "./Forum/chat/chat.component";
+import {RetrieveUsersBackComponent} from "./User/retrieve-users-back/retrieve-users-back.component";
+import {ModifyUsersBackComponent} from "./User/modify-users-back/modify-users-back.component";
+import {LoginComponent} from "./User/login/login.component";
+
+
 const routes: Routes = [
+  {path:'Login',component:LoginComponent},
   {path:'admin',component:BackOfficeComponent,
     children: [
       {path: '', component:HomeBackComponent},
       {path: 'adminProduct', component:BackproductComponent},
-      {path: 'form', component:AddproductComponent},
+      {path: 'addProductBack', component:AddproductComponent},
       {path: 'detailp', component:AdmindetailComponent},
+      {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
+      {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+
 
 
     ]
@@ -27,9 +37,13 @@ const routes: Routes = [
       {path: '', component:HomeFrontComponent},
       {path: 'Product', component:AllproductComponent},
       {path: 'Detail/:id', component:DetailproductComponent},
+      {path: 'Forum', component:HomeForumComponent},
+      {path: 'Chat', component:ChatComponent},
+
 
     ]
   },
+
 
 ];
 

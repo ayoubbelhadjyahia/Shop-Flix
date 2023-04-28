@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home-back',
-  templateUrl: './home-back.component.html',
+  selector: 'app-chat',
+  templateUrl: './chat.component.html',
   styles: [
   ]
 })
-export class HomeBackComponent implements OnInit {
+export class ChatComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
 }

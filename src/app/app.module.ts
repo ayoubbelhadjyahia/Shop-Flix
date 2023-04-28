@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{HttpClientModule} from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,16 @@ import { HttpClientModule} from "@angular/common/http";
 import { BackproductComponent } from './Product/backproduct/backproduct.component';
 import { AddproductComponent } from './Product/addproduct/addproduct.component';
 import { AdmindetailComponent } from './Product/admindetail/admindetail.component';
+
+
+
+import { ChatComponent } from './Forum/chat/chat.component';
+import {FormsModule} from "@angular/forms";
+
+import { LoginComponent } from './User/login/login.component';
+import { RetrieveUsersBackComponent } from './User/retrieve-users-back/retrieve-users-back.component';
+import { ModifyUsersBackComponent } from './User/modify-users-back/modify-users-back.component';
+
 
 
 
@@ -34,11 +45,19 @@ import { AdmindetailComponent } from './Product/admindetail/admindetail.componen
     
 
 
+    ChatComponent,
+
+    LoginComponent,
+    RetrieveUsersBackComponent,
+    ModifyUsersBackComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
