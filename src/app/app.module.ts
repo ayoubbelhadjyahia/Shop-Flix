@@ -29,6 +29,9 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {FacturebackComponent} from "./factureback/factureback.component";
 import {CommandebackComponent} from "./commandeback/commandeback.component";
 import {CartComponent} from "./cart/cart.component";
+import { LigneCommandeComponent } from './ligne-commande/ligne-commande.component';
+import { CommandeDetailComponent } from './commande-detail/commande-detail.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -57,6 +60,8 @@ import {CartComponent} from "./cart/cart.component";
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+    LigneCommandeComponent,
+    CommandeDetailComponent,
 
 
   ],
@@ -65,6 +70,7 @@ import {CartComponent} from "./cart/cart.component";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxPaginationModule,
 
   ],
   providers: [LivraisonService],
