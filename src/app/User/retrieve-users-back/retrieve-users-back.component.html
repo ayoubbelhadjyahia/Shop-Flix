@@ -57,3 +57,29 @@
 <!-- /.row -->
   </div>
 </section>
+<script>
+  const searchInput = document.querySelector('#search-input');
+
+  // ajoute un événement de saisie pour le champ de recherche
+  searchInput.addEventListener('input', function() {
+    // récupère la valeur de recherche
+    const searchTerm = this.value;
+
+    // effectue une requête AJAX pour récupérer les résultats de recherche
+    // en utilisant la valeur de recherche comme paramètre
+    fetch(`/search?q=${searchTerm}`)
+      .then(response => response.json())
+      .then(results => {
+        // affiche les résultats de recherche sur la page
+        const searchResults = document.querySelector('#search-results');
+        searchResults.innerHTML = '';
+
+        results.forEach(result => {
+          const resultElement = document.createElement('div');
+          resultElement.innerHTML = result.title;
+          searchResults.appendChild(resultElement);
+        });
+      })
+      .catch(error => console.error(error));
+  });
+</script>

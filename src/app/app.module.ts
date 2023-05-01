@@ -29,6 +29,14 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {FacturebackComponent} from "./factureback/factureback.component";
 import {CommandebackComponent} from "./commandeback/commandeback.component";
 import {CartComponent} from "./cart/cart.component";
+import { RetrieveMarketsBackComponent } from './User/retrieve-markets-back/retrieve-markets-back.component';
+import { RetrieveContractsBackComponent } from './User/retrieve-contracts-back/retrieve-contracts-back.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { RegisterComponent } from './User/register/register.component';
+import { VerificationComponent } from './User/verification/verification.component';
+import { NewPasswordComponent } from './User/new-password/new-password.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -57,16 +65,24 @@ import {CartComponent} from "./cart/cart.component";
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+    RetrieveMarketsBackComponent,
+    RetrieveContractsBackComponent,
+    NotFoundComponent,
+    AccueilComponent,
+    RegisterComponent,
+    VerificationComponent,
+    NewPasswordComponent,
 
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
 
-  ],
+    ],
   providers: [LivraisonService],
   bootstrap: [AppComponent]
 })

@@ -21,9 +21,9 @@
       <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
         <div class="container-fluid px-0">
                     <span class="navbar-brand ms-sm-3  d-none d-md-block" data-placement="bottom">
-                       <h3 style="color: #C64365">Shop<span style="color: slategrey">Flix</span></h3>
+                            <h3 style="color: #C64365">Shop<span style="color: slategrey">Flix</span></h3>
                     </span>
-          <a class="navbar-brand ps-2 d-flex justify-content-between cursor-pointer align-items-center " routerLink="" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+          <a class="navbar-brand ps-2 d-flex justify-content-between cursor-pointer align-items-center " routerLink="../Acceuil" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
             <i class="material-icons opacity-6 me-1 text-md">home</i>
             Home
           </a>
@@ -40,14 +40,60 @@
           <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
             <ul class="navbar-nav navbar-nav-hover ms-auto">
 
-              <li class="nav-item dropdown dropdown-hover mx-2">
-                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                   routerLink="profil" >
-                  <img alt="Profil Picture" src="assets/front/img/apple-icon.png" class="avatar avatar-xs rounded-circle mx-2">
-                  {{user.lastName}}
-                </a>
-              </li>
 
+
+
+
+
+              <!--              <li class="nav-item dropdown dropdown-hover mx-2">-->
+              <!--                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">-->
+              <!--                  <i class="material-icons opacity-6 me-2 text-md">login</i>-->
+              <!--                  Sign in-->
+              <!--                </a>-->
+              <!--              </li>-->
+
+
+
+
+
+              <li class="nav-item dropdown dropdown-hover mx-2">
+                <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuAccount" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="material-icons opacity-6 me-2 text-md">contacts</i>
+                  Account
+                  <img src="/assets/front/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+                  <img src="/assets/front/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto">
+                </a>
+                <div class="dropdown-menu dropdown-menu-animation dropdown-md border-radius-xl p-3 mt-0 mt-lg-3" aria-labelledby="dropdownMenuAccount">
+                  <div class="d-none d-lg-flex">
+                    <ul class="list-group w-100">
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                        <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1" id="dropdownSignIn">
+                          <span>Sign In</span>
+                          <img src="/assets/front/img/down-arrow.svg" alt="down-arrow" class="arrow ms-auto">
+                        </a>
+
+                      </li>
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                        <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1" id="dropdownSignUp">
+                          <span>Sign Up</span>
+                          <img src="/assets/front/img/down-arrow.svg" alt="down-arrow" class="arrow ms-auto">
+                        </a>
+
+                      </li>
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                        <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1" id="dropdownPasswordReset">
+                          <span>Password Reset</span>
+                          <img src="/assets/front/img/down-arrow.svg" alt="down-arrow" class="arrow ms-auto">
+                        </a>
+
+                      </li>
+
+
+                    </ul>
+                  </div>
+
+                </div>
+              </li>
 
 
               <li class="nav-item dropdown dropdown-hover mx-2">
@@ -61,7 +107,7 @@
                   <div class="d-none d-lg-block">
                     <ul class="list-group">
                       <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../index-3.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="../Login">
                           <div class="d-flex">
                             <div class="w-100 d-flex align-items-center justify-content-between">
                               <div>
@@ -72,7 +118,7 @@
                         </a>
                       </li>
                       <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../index-3.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="../Login">
                           <div class="d-flex">
                             <div class="w-100 d-flex align-items-center justify-content-between">
                               <div>
@@ -83,7 +129,7 @@
                         </a>
                       </li>
                       <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../index-3.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="../Login">
                           <div class="d-flex">
                             <div class="w-100 d-flex align-items-center justify-content-between">
                               <div>
@@ -95,7 +141,7 @@
                       </li>
 
                       <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../index-3.html">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" routerLink="../Login">
                           <div class="d-flex">
                             <div class="w-100 d-flex align-items-center justify-content-between">
                               <div>
@@ -123,78 +169,15 @@
 
 
 
-<!--              <li class="nav-item dropdown dropdown-hover mx-2">-->
-<!--                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">-->
-<!--                  <i class="material-icons opacity-6 me-2 text-md">login</i>-->
-<!--                  Sign in-->
-<!--                </a>-->
-<!--              </li>-->
-
-              <li class="nav-item dropdown dropdown-hover mx-2" >
-                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                   data-bs-toggle="modal" data-bs-target="#chartModel" >
-                  <a href="#" data-toggle="modal" data-target="#chartModal">
-                    <span> <i class="material-icons opacity-6">add_shopping_cart</i>   </span>
-
-                  </a>
-
-
-                </a>
-              </li>
-
-
 
 
 
 
               <li class="nav-item dropdown dropdown-hover mx-2">
-                <a role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="material-icons opacity-6">notifications</i>
-                  <span class="badge rounded-pill bg-dark">10</span>
-                  <img src="assets/front/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto">
-                </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
-
-                  <!--Big Screen Notifications-->
-                  <div class="d-none d-lg-block">
-                    <ul class="list-group">
-                      <li class="nav-item list-group-item border-0 p-0">
-
-                                                <span class="dropdown-item py-2 ps-3 border-radius-md" >
-
-                                                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-center align-items-center p-0"><i class="fa fa-circle fa-xs me-3 mt-3" style="color: #1770e6"></i>message</h6>
-                                                    <span class="text-sm ms-4">notif<i class="fa fa-clock ms-1"></i>
-                                                        </span>
-
-                                                </span>
-                      </li>
-
-                    </ul>
-                  </div>
-                  <!--Big Screen Notifications-->
-
-
-                  <!--Small Screen Notifications-->
-                  <div class="row d-lg-none">
-                    <div class="col-md-12 g-0">
-                      <a class="dropdown-item py-2 ps-3 border-radius-md">
-                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">message</h6>
-                        <i class="material-icons opacity-6 me-2">access_alarm</i>
-                        <span class="text-sm">aa</span>
-                      </a>
-                    </div>
-                  </div>
-                  <!--Small Screen Notifications-->
-                </div>
-              </li>
-
-
-
-
-              <li class="nav-item dropdown dropdown-hover mx-2">
-                <a  routerLink="Login" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                <a  routerLink="../Login" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                >
                   <i class="material-icons opacity-6 me-2 text-md">logout</i>
-                  Sign out
+                  Sign In
                 </a>
               </li>
 
@@ -325,3 +308,4 @@
   </div>
 </div>
 <!-- Modal Chart -->
+

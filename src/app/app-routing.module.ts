@@ -22,11 +22,25 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {CommandeComponent} from "./commande/commande.component";
 import {FactureComponent} from "./facture/facture.component";
 import {CartComponent} from "./cart/cart.component";
+import {RetrieveMarketsBackComponent} from "./User/retrieve-markets-back/retrieve-markets-back.component";
+import {RetrieveContractsBackComponent} from "./User/retrieve-contracts-back/retrieve-contracts-back.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
+import {AccueilComponent} from "./accueil/accueil.component";
+import {RegisterComponent} from "./User/register/register.component";
+import {VerificationComponent} from "./User/verification/verification.component";
+import {NewPasswordComponent} from "./User/new-password/new-password.component";
 
 
 
 const routes: Routes = [
+  {path:'Acceuil',component:AccueilComponent},
+  {path:'newpassword',component:NewPasswordComponent},
+
+  {path:'verification',component:VerificationComponent},
+
+  {path:'Error',component:NotFoundComponent},
   {path:'Login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
 
   {path:'admin',component:BackOfficeComponent,
     children: [
@@ -41,6 +55,9 @@ const routes: Routes = [
       {path: 'detailp/:id', component:AdmindetailComponent},
       {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+      {path: 'retrievemarketsback', component:RetrieveMarketsBackComponent},
+      {path: 'retrievecontractsback', component:RetrieveContractsBackComponent},
+
 
 
     ]
