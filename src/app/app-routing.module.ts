@@ -22,6 +22,13 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {CommandeComponent} from "./commande/commande.component";
 import {FactureComponent} from "./facture/facture.component";
 import {CartComponent} from "./cart/cart.component";
+import { MapsComponent } from './maps/maps.component';
+import { AllLivreurComponent } from './all-livreur/all-livreur.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundBackComponent } from './not-found-back/not-found-back.component';
+import { LivreurComponent } from './livreur/livreur.component';
+import { BestemployerComponent } from './bestemployer/bestemployer.component';
+import { AllLivraisonsfrontComponent } from './all-livraisonsfront/all-livraisonsfront.component';
 
 
 
@@ -31,6 +38,9 @@ const routes: Routes = [
   {path:'admin',component:BackOfficeComponent,
     children: [
       {path: '', component:HomeBackComponent},
+      {path:'bestemployer',component:BestemployerComponent},
+      {path:'addLivreur',component:LivreurComponent},
+      {path:'retrieveAllLivreur',component:AllLivreurComponent},
       {path:'Commandeback',component:CommandebackComponent},
       {path:'Factureback',component:FacturebackComponent},
       {path:'Cartback',component:CartbackComponent},
@@ -41,6 +51,9 @@ const routes: Routes = [
       {path: 'detailp/:id', component:AdmindetailComponent},
       {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+      {path: 'map',component:MapsComponent},
+      {path: '**', component:NotFoundBackComponent},
+      
 
 
     ]
@@ -48,6 +61,8 @@ const routes: Routes = [
   {path:'',component:FrontOfficeComponent,
     children: [
       {path: '', component:HomeFrontComponent},
+      {path:'addmydelivery',component:AllLivraisonsfrontComponent},
+      {path: 'map',component:MapsComponent},
       {path:'Commande',component:CommandeComponent},
       {path:'Cart',component:CartComponent},
       {path:'Facture',component:FactureComponent},
@@ -55,6 +70,8 @@ const routes: Routes = [
       {path: 'Detail/:id', component:DetailproductComponent},
       {path: 'Forum', component:HomeForumComponent},
       {path: 'Chat', component:ChatComponent},
+      {path: '**', component:NotFoundComponent},
+      
 
     ]
   },

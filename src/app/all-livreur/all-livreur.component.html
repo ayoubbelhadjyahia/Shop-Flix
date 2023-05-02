@@ -1,0 +1,103 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag -->
+
+
+
+
+<div class="container1">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="number" class="search-query form-control" placeholder="  Search With Delivery man id "  name="idlivreur" [(ngModel)]="idLivreur"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="getLivreurById(idLivreur)">
+                                           search
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div>
+
+
+<div class="container2">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date d'embauche</th>
+            <th>Salaire</th>
+            <th>Nombre de livraison</th>
+            <th>Statut livreur</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let Livreur of livreurs">
+            <td>{{Livreur.idLivreur}}</td>
+            <td>{{Livreur.datedembauche}}</td>
+            <td>{{Livreur.salaire}}</td>
+            <td>{{Livreur.nbrelivraison}}</td>
+            <td>{{Livreur.statutlivreur}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteLivreur(Livreur.idLivreur)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+            <td><button (click)="updateLivreur(Livreur)">Modifier</button></td>
+            <td><button (click)="ajouterBonus(Livreur.idLivreur)">Bonus</button></td>
+            <td><button (click)="ajouterUnBonus(Livreur.idLivreur)">Bonus+</button></td>
+
+          </tr>
+    </tbody>
+    </table>
+
+    <div *ngIf="editing">
+    <form>
+        <fieldset>
+            <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                        *:required</small></span></legend>
+
+
+            
+                        <div class="form-group">
+                            <label for="number"><span class="number">*Salary: </span> <small>
+                                    </small> </label>
+                            <input required type="text" [(ngModel)]="NewLivreur.salaire" name="salaire" id="salaire"
+                                class="form-control phone" maxlength="28" placeholder="Enter the amount..." />
+                        </div>
+
+            <div class="form-group">
+                <label for="number"><span class="number">* Nombre de livraison : </span> <small>This is the  number of the deliveries
+                        </small> </label>
+                <input required type="number" [(ngModel)]="NewLivreur.nbrelivraison" name="nbrelivraison" id="nbrelivraison"
+                    class="form-control phone" maxlength="8" placeholder="Enter the amount..." />
+            </div>
+
+
+
+       <!-- <div class="form-group">
+            <label for="enumeration">* Select a status :</label>
+            <select id="enumeration"  [(ngModel)]="NewLivreur.statutlivreur"  name="enumeration"  id="statutlivreur">
+                <option >Disponible</option>
+                <option >Enlivraison</option>
+                <option >Nondisponible</option>
+            </select>
+        </div>-->
+
+        <div class="form-group">
+            <label for="statut_livreur">* Delivery man status :</label>  
+                <select class="form-control" id="statut_livreur" name="statut_livreur"[(ngModel)]="NewLivreur.statutlivreur" required >
+                  <option *ngFor="let type of livreurstatus " [value]="type">{{type}}</option>
+                </select>
+             
+        </div>
+
+            <div class="form-group">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="register()">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<button mat-button class="bouton1"(click)="redirectToPage()">Best Employer </button>
+    </div>
+</div>
+
