@@ -9,7 +9,7 @@
 
         <div class="card-tools">
           <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search" id="search-input">
 
             <div class="input-group-append">
               <button type="submit" class="btn btn-default">
@@ -21,7 +21,7 @@
       </div>
       <!-- /.card-header -->
       <div class="card-body table-responsive p-0" style="height: 300px;">
-        <table class="table table-head-fixed text-nowrap">
+        <table class="table table-head-fixed text-nowrap" >
           <thead>
           <tr>
             <th>ID</th>
@@ -34,7 +34,7 @@
             <th>Actions</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody id="search-results">
           <tr *ngFor="let u of listUsers">
             <td>{{u.id}}</td>
             <td>{{u.username}}</td>
