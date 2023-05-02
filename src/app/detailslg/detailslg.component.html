@@ -1,0 +1,77 @@
+
+<br>
+<br>
+<br>
+<br>
+<form #fff="ngForm">
+<div class="faress">
+  <div class='signup-container'>
+    <div class='left-container'>
+      <h1>
+        <i class='fas fa-paw'></i>
+        Reclamation
+      </h1>
+      <div class='puppy'>
+        <img src='../../../assets/images/client.jpg'>
+      </div>
+    </div>
+    <div class='right-container'>
+      <header>
+        <h1>Faite une reclamation</h1>
+
+        <div class='set'>
+          <div class='pets-name'>
+
+
+            <label >type de la reclamation</label>
+            <div>
+              <input type="text" placeholder="typerec" name="typerec"    required [(ngModel)]="reclamation.typerec" #typerec="ngModel" id="telephone_input" >
+              <div *ngIf="typerec.invalid && typerec.touched" [ngStyle]="{'color': 'red'} ">
+                Veuillez saisir le type de reclamation
+              </div>
+
+
+            </div>
+          </div>
+          <div class='pets-photo'>
+
+          </div>
+        </div>
+        <div class='set'>
+          <div class='pets-breed'>
+            <div>
+              <label >priorite de la reclamation </label>
+              <input type="text" placeholder="priorite" required name="priorite"  [(ngModel)]="reclamation.priorite" #priorite="ngModel" >
+              <div *ngIf="priorite.invalid && priorite.touched" [ngStyle]="{'color': 'red'}"
+              >
+                Veuillez saisir la priroté de votre réclamation
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class='pets-birthday'>
+            <div>
+              <label for='pets-birthday'>La description de la reclamation</label>
+              <input id='pets-birthday' required type="text"  name="description" placeholder="enter description" [(ngModel)]="reclamation.description" #description="ngModel" >
+              <div *ngIf="description.invalid && description.touched" [ngStyle]="{'color': 'red'}"
+              >
+                Veuillez saisir la description de votre reclamation
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+      <button id='back' (click)="ajouterrec()" [disabled]="fff.invalid">save</button>
+    </div>
+        <div>
+
+        </div>
+
+
+
+    </div>
+  </div>
+</form>

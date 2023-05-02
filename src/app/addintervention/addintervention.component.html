@@ -1,0 +1,59 @@
+<div class="faress">
+  <div class='signup-container'>
+    <div class='left-container'>
+      <h1>
+        <i class='fas fa-paw'></i>
+  Intervention
+      </h1>
+      <div class='puppy'>
+        <img src='../../../assets/images/reglage.png'>
+      </div>
+    </div>
+    <div class='right-container'>
+      <header>
+        <h1>Faite une intervention</h1>
+
+        <div class='set'>
+          <div class='pets-name'>
+
+
+            <label >duree de l intervention </label>
+            <div>
+              <input type="text" placeholder="duree" name="duree" [(ngModel)]="intervention.dureeinter" #duree="ngModel" id="telephone_input">
+
+
+            </div>
+          </div>
+          <div class='pets-photo'>
+
+          </div>
+        </div>
+        <div class='set'>
+          <div class='pets-breed'>
+            <div>
+              <label >Descritpion de l intervention </label>
+              <input type="text" placeholder="description" name="description"  [(ngModel)]="intervention.description" #description="ngModel" >
+
+
+            </div>
+          </div>
+
+
+          <div class='pets-birthday'>
+            <div>
+              <label for='pets-birthday'>La date de debut dintervention</label>
+              <input id='pets-birthday' type="text" name="date" placeholder="enter date" [(ngModel)]="intervention.datedebinter" #date="ngModel" >
+            </div>
+          </div>
+        </div>
+        <button id='sabrine' (click)="add()">save</button>
+          <div>
+
+        </div>
+
+      </header>
+
+    </div>
+  </div>
+
+</div>

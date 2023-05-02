@@ -1,0 +1,24 @@
+.card{
+  margin: 100px 100px 100px 100px;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.wided{
+  color:#C71585;
+  margin-right:20px;
+}
+button {
+  background-color: #FFB6C1; /* Green */
+  border: 1px solid ;
+  border-color: #C71585;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
