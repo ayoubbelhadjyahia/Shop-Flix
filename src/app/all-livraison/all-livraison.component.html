@@ -4,11 +4,12 @@
 <!------ Include the above in your HEAD tag -->
 
 
-<div class="container">
+
+<div class="container1">
     <div class="row">
                <div id="custom-search-input">
                                 <div class="input-group col-md-12" style="text-align: center">
-                                    <input type="text" class="search-query form-control" placeholder="  Search With Center Name "  name="nomdestinataire" [(ngModel)]="nomdestinataire"/>
+                                    <input type="text" class="search-query form-control" placeholder="  Search With Delivery Name "  name="nomdestinataire" [(ngModel)]="nomdestinataire"/>
                                     <span class="input-group-btn">
                                         <button class="btn btn-danger" type="button" (click)="SearchLivraison()">
                                            search
@@ -17,44 +18,42 @@
                                 </div>
                             </div>
     </div>
-    </div>
+</div>
 
-<div class="container">
-<div class="container">
+    <div>
+<div class="container2">
     <div class="row col-md-6 col-md-offset-2 custyle">
     <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>nomdestinataire</th>
-            <th>prenomdestinataire</th>
-            <th>adresse</th>
-            <th>mail</th>
-            <th>numerotel</th>
+            <th>Recipient's lastname</th>
+            <th>Recipient's firstname</th>
+            <th>Adress</th>
+            <th>Mail</th>
+            <th>Phone number</th>
             <th>Action</th>
     </thead>
     <tbody>
         <tr *ngFor="let Livraison of livraisons">
-            <td>{{Livraison.idlivraison}}</td>
             <td>{{Livraison.nomdestinataire}}</td>
             <td>{{Livraison.prenomdestinataire}}</td>
             <td>{{Livraison.adresse}}</td>
             <td>{{Livraison.mail}}</td>
             <td>{{Livraison.numerotel}}</td>
             <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delete(Livraison.idLivraison)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
-            <td><button (click)="updateDelivery(Livraison)">Modifier</button></td>
+            <td><button (click)="updateDelivery(Livraison)">Edit</button></td>
+            
           </tr>
     </tbody>
     </table>
-
     <div *ngIf="editing">
-    <form>
+    <form #sabri="ngForm">
         <fieldset>
             <legend class="text-center">Valid information is required to register. <span class="req"><small>
                         *:required</small></span></legend>
 
             <div class="form-group">
-                <label for="adress"><span class="req">* Address : </span> Adress: <small>This is the  address of the delivery
+                <label for="adress"><span class="req">* Address : </span><small>This is the  address of the delivery
                         </small> </label>
                 <input required type="text" [(ngModel)]="Livraison.adresse" name="adress" id="adress"
                     class="form-control phone" maxlength="28" placeholder="Enter the adress..." />
@@ -66,41 +65,59 @@
 
 
 
-            <div class="form-group">
-                <label ><span class="req">* Email :</span> Email: </label>
-                <input class="form-control" type="text" [(ngModel)]="Livraison.mail" name="email" id="txt" required
+           <div class="form-group">
+               <label ><span class="req">* Email :</span></label>
+                 <!--<input class="form-control" type="email" [(ngModel)]="Livraison.mail" name="email" id="txt" required
                     placeholder="Enter valid email address" />
+                    <script src="all-livraison.component.ts"></script>
+                    <script>
+                      const emailInput = document.getElementById('email');
+                      const submitButton = document.getElementById('submit');
+                
+                      submitButton.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (!validateEmail(emailInput.value)) {
+                          alert('Invalid email address');
+                        } else {
+                        }
+                      });
+                    </script>
                 <div id="errFirst"></div>
+                </div>-->
+                <input class="form-control"  type="mail"  [(ngModel)]="livraison.mail"  name="mail"  id="mail" 
+                required placeholder="Enter valid email address"(input)="isValidEmail = validateEmail(livraison.mail)">
+                <span *ngIf="livraison.mail && !isValidEmail" style="color: red">Invalid email address</span>
             </div>
+            
 
             <div class="form-group">
-                <label ><span class="req"> * Recipient's lastname:</span> Recipient's lastname: </label>
+                <label ><span class="req"> * Recipient's lastname:</span>  </label>
                 <input class="form-control" type="text" [(ngModel)]="Livraison.nomdestinataire" name="nomdestinataire" id="txta"
-                    placeholder="Total year of experience" required />
+                    placeholder="Enter Recipient's lastname" required />
                 <div id="errLast"></div>
             </div>
 
             <div class="form-group">
-                <label ><span class="req"> * Recipient's firstname :  </span> Recipient's firstname : </label>
+                <label ><span class="req"> * Recipient's firstname :  </span> </label>
                 <input class="form-control" required type="text" [(ngModel)]="Livraison.prenomdestinataire" name="prenomdestinataire"
-                    id="email" placeholder="fullstack/backend/developer" />
+                    id="email" placeholder="Enter Recipient's firstname " />
                 <div class="status" id="status"></div>
             </div>
 
             <div class="form-group">
-                <label ><span class="req">* Phone number : </span> Phone number : </label>
-                <input class="form-control" type="number" [(ngModel)]="Livraison.numerotel" name="Numero" id="txtt"
-                    placeholder="Total year of experience" required />
+                <label ><span class="req">* Phone number : </span></label>
+                <input class="form-control" required type="number" ngMaxlength="8" [(ngModel)]="Livraison.numerotel" name="Numero" id="txtt"
+                    placeholder="Enter phone number"   />
                 <div id="errLastt"></div>
+                
             </div>
 
             <div class="form-group">
-                <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="register()">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="register()" [disabled]="sabri.invalid">
             </div>
+            
         </fieldset>
     </form>
 </div>
 
-    </div>
-</div>
 </div>

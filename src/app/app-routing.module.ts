@@ -22,6 +22,13 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {CommandeComponent} from "./commande/commande.component";
 import {FactureComponent} from "./facture/facture.component";
 import {CartComponent} from "./cart/cart.component";
+import { MapsComponent } from './maps/maps.component';
+import { AllLivreurComponent } from './all-livreur/all-livreur.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundBackComponent } from './not-found-back/not-found-back.component';
+import { LivreurComponent } from './livreur/livreur.component';
+import { BestemployerComponent } from './bestemployer/bestemployer.component';
+import { AllLivraisonsfrontComponent } from './all-livraisonsfront/all-livraisonsfront.component';
 import {HomeBackForumComponent} from "./Forum/home-back-forum/home-back-forum.component";
 import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
 import {DetailBackForumComponent} from "./Forum/detail-back-forum/detail-back-forum.component";
@@ -39,7 +46,6 @@ import {CommandeDetailComponent} from "./commande-detail/commande-detail.compone
 
 
 
-
 const routes: Routes = [
   {path:'Acceuil',component:AccueilComponent},
   {path:'newpassword',component:NewPasswordComponent},
@@ -53,6 +59,9 @@ const routes: Routes = [
   {path:'admin',component:BackOfficeComponent,
     children: [
       {path: '', component:HomeBackComponent},
+      {path:'bestemployer',component:BestemployerComponent},
+      {path:'addLivreur',component:LivreurComponent},
+      {path:'retrieveAllLivreur',component:AllLivreurComponent},
       {path:'Commandeback',component:CommandebackComponent},
       {path:'HomeBackForum',component:HomeBackForumComponent},
       {path:'Factureback',component:FacturebackComponent},
@@ -64,6 +73,9 @@ const routes: Routes = [
       {path: 'detailp/:id', component:AdmindetailComponent},
       {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+      {path: 'map',component:MapsComponent},
+      {path: '**', component:NotFoundBackComponent},
+      
 
       {path: 'backDF/:id', component:DetailBackForumComponent},
       {path: 'retrievemarketsback', component:RetrieveMarketsBackComponent},
@@ -77,6 +89,8 @@ const routes: Routes = [
   {path:'',component:FrontOfficeComponent,
     children: [
       {path: '', component:HomeFrontComponent},
+      {path:'addmydelivery',component:AllLivraisonsfrontComponent},
+      {path: 'map',component:MapsComponent},
       {path: 'Chat', component:ChatComponent},
       {path: 'ChatP', component:ChatPriveComponent},
       {path:'Commande',component:CommandeComponent},
@@ -86,8 +100,9 @@ const routes: Routes = [
       {path: 'Detail/:id', component:DetailproductComponent},
       {path: 'Forum', component:HomeForumComponent},
       {path: 'Chat', component:ChatComponent},
-      {path: 'LigneCommande', component:LigneCommandeComponent},
+      {path: '**', component:NotFoundComponent},
 
+      {path: 'LigneCommande', component:LigneCommandeComponent},
 
     ]
   },

@@ -9,9 +9,8 @@ import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
 import { HomeBackComponent} from "./home-back/home-back.component";
 import { HomeFrontComponent} from "./home-front/home-front.component";
 import { LivraisonComponent } from './livraison/livraison.component';
-import { LivraisonService } from './livraison.service';
+import { LivraisonService } from './Service/LivServ/livraison.service';
 import { AllLivraisonComponent } from './all-livraison/all-livraison.component';
-import { MeilleuremployeComponent } from './back-office/meilleuremploye/meilleuremploye.component';
 import { AllproductComponent } from './Product/allproduct/allproduct.component';
 import { DetailproductComponent } from './Product/detailproduct/detailproduct.component';
 import { BackproductComponent } from './Product/backproduct/backproduct.component';
@@ -28,6 +27,14 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {FacturebackComponent} from "./factureback/factureback.component";
 import {CommandebackComponent} from "./commandeback/commandeback.component";
 import {CartComponent} from "./cart/cart.component";
+import { MapsComponent } from './maps/maps.component';
+import { AllLivreurComponent } from './all-livreur/all-livreur.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundBackComponent } from './not-found-back/not-found-back.component';
+import { LivreurComponent } from './livreur/livreur.component';
+import { BestemployerComponent } from './bestemployer/bestemployer.component';
+import { AllLivraisonsfrontComponent } from './all-livraisonsfront/all-livraisonsfront.component';
+import { ToastrModule } from 'ngx-toastr';
 import { HomeBackForumComponent } from './Forum/home-back-forum/home-back-forum.component';
 import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
 import { DetailBackForumComponent } from './Forum/detail-back-forum/detail-back-forum.component';
@@ -62,7 +69,6 @@ import {NgxPaginationModule} from "ngx-pagination";
     CommandebackComponent,
     LivraisonComponent,
     AllLivraisonComponent,
-    MeilleuremployeComponent,
     AllproductComponent,
     DetailproductComponent,
     BackproductComponent,
@@ -72,6 +78,13 @@ import {NgxPaginationModule} from "ngx-pagination";
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+    MapsComponent,
+    AllLivreurComponent,
+    NotFoundComponent,
+    NotFoundBackComponent,
+    LivreurComponent,
+    BestemployerComponent,
+    AllLivraisonsfrontComponent,
     HomeBackForumComponent,
     ChatPriveComponent,
     DetailBackForumComponent,
@@ -106,14 +119,20 @@ import {NgxPaginationModule} from "ngx-pagination";
     CommandeDetailComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ToastrModule.forRoot()
+
+  ],
+
     NgxPaginationModule,
     ],
+
   providers: [LivraisonService],
   bootstrap: [AppComponent]
 })
