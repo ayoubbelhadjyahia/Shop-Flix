@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {UserService} from "../Service/UserServices/user.service";
+import {user} from "../Model/User/User";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ConsumerPanierService} from "../Service/PanierSer/consumer-panier.service";
 import {panier} from "../Model/PanierR/panier";
@@ -12,6 +15,24 @@ import {Lignecommande} from "../Model/PanierR/lignecommande";
   ]
 })
 export class FrontOfficeComponent implements OnInit {
+  user!:user;
+
+  constructor(public router: Router,public _users : UserService) { }
+
+  ngOnInit(): void {
+    const username:any=localStorage.getItem('currentUser');
+    if(username) {
+      this._users.getUserUsername(username).subscribe(data => {
+        console.log(data);
+        this.user=data;
+
+      });
+    }
+    else {
+      this.router.navigateByUrl("Error").then(() => {
+        window.location.reload();
+      });
+    }
   panier!:panier[];
   lignecommande!:Lignecommande[];
   idUser:number=1;

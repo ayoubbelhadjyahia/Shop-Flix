@@ -1,3 +1,6 @@
+import {market} from "./market";
+import {role} from "./role";
+
 export class user{
   id !: any;
   firstName !: any;
@@ -14,5 +17,7 @@ export class user{
   createdAt !: any;
   ban !: any;
   banTime !: any;
+  market !: market;
+  roles!:role[];
 
 }
