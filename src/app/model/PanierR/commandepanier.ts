@@ -1,6 +1,10 @@
+import {Lignecommande} from "./lignecommande";
+
 export class Commande {
-    idCommande!:number;
-    NumCommande!:number;
-    DateCommande!:Date;
-    AdressCommande!:string;
+  idCommande!:number;
+  numCommande!:any;
+  dateCommande!:Date;
+  adressCommande!:string;
+   idLigneCommande!:number;
+  ligneCommandes!:Lignecommande[];
   }

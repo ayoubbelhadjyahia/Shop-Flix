@@ -1,0 +1,96 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div style="text-align: center">
+   <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+       <div class="col-md-6">
+           <form #sabrine="ngForm">
+               <fieldset>
+                   <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                               *:required</small></span></legend>
+
+                   <div class="form-group">
+                       <label for="txt"><span class="req">* Recipient's firstname : </span> <small>This is the  address of the delivery
+                               </small> </label>
+                       <input  type="text" required [(ngModel)]="NewLivraison.prenomdestinataire" #firstname="ngModel" name="firstname" id="firstname"
+                           class="form-control phone" maxlength="28" placeholder="Enter the firstname..."  />
+                           <div *ngIf="firstname.invalid && firstname.touched" [ngStyle]="{'color': 'red'}">
+                            Please enter your firstname!
+                          </div>
+                   </div>
+
+                   <div class="form-group">
+                    <label for="lastname"><span class="req"> * Recipient's lastname:</span>  </label>
+                    <input class="form-control" type="text" required [(ngModel)]="NewLivraison.nomdestinataire" #lastname="ngModel" name="lastname" id="txt"
+                        placeholder="Enter the lastname"  />
+                        <div *ngIf="lastname.invalid && lastname.touched" [ngStyle]="{'color': 'red'}">
+                            Please enter your lastname!
+                        </div>
+                    <div id="errLast"></div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="adress"><span class="req">* Recipient's Address : </span><small>This is the  address of the Recepient
+                            </small> </label>
+                    <input required type="text" required [(ngModel)]="NewLivraison.adresse" name="adress" id="adress"
+                        class="form-control phone" maxlength="28" placeholder="Enter the adress..." />
+                        <div *ngIf="firstname.invalid && firstname.touched" [ngStyle]="{'color': 'red'}">
+                            Please enter your home address!
+                          </div>
+                </div>
+
+
+                   <div class="form-group">
+                       <label for="email "><span class="req">* Recipient's Email :</span>  </label>
+                       <input class="form-control" type="text" required [(ngModel)]="NewLivraison.mail" #mail="ngModel" name="email" id="txt" 
+                           placeholder="Enter valid email address" />
+                       <div id="errFirst"></div>
+                       <div *ngIf="mail.invalid && mail.touched" [ngStyle]="{'color': 'red'}">
+                        Please enter your email!
+                      </div>
+                   </div>
+
+
+                   <div class="form-group">
+                       <label for="phonenum"><span class="req">* Recipient's Phone number : </span>  </label>
+                       <input class="form-control" type="number" required [(ngModel)]="NewLivraison.numerotel" name="Numero" id="txt"
+                           placeholder="Enter your phone number"  />
+                       <div id="errLast"></div>
+                   </div>
+
+
+                   <div class="form-group">
+                    <label for="statut_livreur">* Type of Delivery  :</label>  
+                        <select class="form-control" id="type_livraison" name="type_livraison"[(ngModel)]="NewLivraison.type_livraison" required >
+                          <option *ngFor="let type of typelivraison " [value]="type">{{type}}</option>
+                        </select>
+                     
+                </div>
+
+                   <div class="form-group" >
+                       <input class="btn btn-success" type="submit" name="submit_reg" value="Register"  [disabled]="sabrine.invalid">
+                       <button (click)="onButtonClick(1)">Add Livraison and Calculate PT</button>
+                   </div>
+               </fieldset>
+           </form>
+        
+       <br>
+       <br>
+       <br>  
+       <br>
+       </div>
+
+       <br>
+
+       <br>
+
+
+   </div>
+</div>
+

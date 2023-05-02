@@ -1,6 +1,7 @@
 import {PostLike} from "./PostLike";
 import {Image} from "./Image";
 import {Comment} from "./Comment";
+import {user} from "../User/User";
 
 export class Post {
   idPost!:number;
@@ -9,9 +10,9 @@ export class Post {
   dateCre !:Date;
   archiver!:boolean;
   body!:String;
-  user!:any[];
+  user!:user;
   postLikes!: PostLike[];
-  comment!:Comment[];
+  comments!:Comment[];
   reported!:any[];
   image!:Image;
 }

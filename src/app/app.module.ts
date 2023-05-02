@@ -6,11 +6,10 @@ import { AppComponent } from './app.component';
 import { BackOfficeComponent } from './back-office/back-office.component';
 import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
-
 import { HomeBackComponent} from "./home-back/home-back.component";
 import { HomeFrontComponent} from "./home-front/home-front.component";
 import { LivraisonComponent } from './livraison/livraison.component';
-import { LivraisonService } from './livraison.service';
+import { LivraisonService } from './Service/LivServ/livraison.service';
 import { AllLivraisonComponent } from './all-livraison/all-livraison.component';
 import { MeilleuremployeComponent } from './reclamationcomonenets/meilleuremploye/meilleuremploye.component';
 import { AllproductComponent } from './Product/allproduct/allproduct.component';
@@ -49,6 +48,31 @@ import { EditinterventionComponent } from './editintervention/editintervention.c
 import { LgcommandesComponent } from './lgcommandes/lgcommandes.component';
 import { DetailsinterComponent } from './Detalslg/detailsinter.component';
 import { DetailslgComponent } from './detailslg/detailslg.component';
+=======
+import { MapsComponent } from './maps/maps.component';
+import { AllLivreurComponent } from './all-livreur/all-livreur.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundBackComponent } from './not-found-back/not-found-back.component';
+import { LivreurComponent } from './livreur/livreur.component';
+import { BestemployerComponent } from './bestemployer/bestemployer.component';
+import { AllLivraisonsfrontComponent } from './all-livraisonsfront/all-livraisonsfront.component';
+import { ToastrModule } from 'ngx-toastr';
+import { HomeBackForumComponent } from './Forum/home-back-forum/home-back-forum.component';
+import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
+import { DetailBackForumComponent } from './Forum/detail-back-forum/detail-back-forum.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import {ToastrModule} from "ngx-toastr";
+import { RetrieveMarketsBackComponent } from './User/retrieve-markets-back/retrieve-markets-back.component';
+import { RetrieveContractsBackComponent } from './User/retrieve-contracts-back/retrieve-contracts-back.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { RegisterComponent } from './User/register/register.component';
+import { VerificationComponent } from './User/verification/verification.component';
+import { NewPasswordComponent } from './User/new-password/new-password.component';
+
+import { LigneCommandeComponent } from './ligne-commande/ligne-commande.component';
+import { CommandeDetailComponent } from './commande-detail/commande-detail.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -67,7 +91,6 @@ import { DetailslgComponent } from './detailslg/detailslg.component';
     CommandebackComponent,
     LivraisonComponent,
     AllLivraisonComponent,
-    MeilleuremployeComponent,
     AllproductComponent,
     DetailproductComponent,
     BackproductComponent,
@@ -108,6 +131,62 @@ import { DetailslgComponent } from './detailslg/detailslg.component';
 
     ],
   providers: [LivraisonService, ReclamationService],
+    MapsComponent,
+    AllLivreurComponent,
+    NotFoundComponent,
+    NotFoundBackComponent,
+    LivreurComponent,
+    BestemployerComponent,
+    AllLivraisonsfrontComponent,
+    HomeBackForumComponent,
+    ChatPriveComponent,
+    DetailBackForumComponent,
+
+
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+      ToastrModule.forRoot(),
+
+    RetrieveMarketsBackComponent,
+    RetrieveContractsBackComponent,
+    NotFoundComponent,
+    AccueilComponent,
+    RegisterComponent,
+    VerificationComponent,
+    NewPasswordComponent,
+
+
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+    LigneCommandeComponent,
+    CommandeDetailComponent,
+
+
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot()
+
+  ],
+
+    NgxPaginationModule,
+    ],
+
+  providers: [LivraisonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
