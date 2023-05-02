@@ -36,6 +36,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { RegisterComponent } from './User/register/register.component';
 import { VerificationComponent } from './User/verification/verification.component';
 import { NewPasswordComponent } from './User/new-password/new-password.component';
+
+import { LigneCommandeComponent } from './ligne-commande/ligne-commande.component';
+import { CommandeDetailComponent } from './commande-detail/commande-detail.component';
 import {NgxPaginationModule} from "ngx-pagination";
 
 
@@ -81,6 +84,17 @@ import {NgxPaginationModule} from "ngx-pagination";
         HttpClientModule,
         FormsModule,
         NgxPaginationModule,
+    LigneCommandeComponent,
+    CommandeDetailComponent,
+
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgxPaginationModule,
 
     ],
   providers: [LivraisonService],

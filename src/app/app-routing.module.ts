@@ -22,6 +22,7 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {CommandeComponent} from "./commande/commande.component";
 import {FactureComponent} from "./facture/facture.component";
 import {CartComponent} from "./cart/cart.component";
+
 import {RetrieveMarketsBackComponent} from "./User/retrieve-markets-back/retrieve-markets-back.component";
 import {RetrieveContractsBackComponent} from "./User/retrieve-contracts-back/retrieve-contracts-back.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
@@ -29,6 +30,10 @@ import {AccueilComponent} from "./accueil/accueil.component";
 import {RegisterComponent} from "./User/register/register.component";
 import {VerificationComponent} from "./User/verification/verification.component";
 import {NewPasswordComponent} from "./User/new-password/new-password.component";
+
+import {LigneCommandeComponent} from "./ligne-commande/ligne-commande.component";
+import {CommandeDetailComponent} from "./commande-detail/commande-detail.component";
+
 
 
 
@@ -57,6 +62,8 @@ const routes: Routes = [
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
       {path: 'retrievemarketsback', component:RetrieveMarketsBackComponent},
       {path: 'retrievecontractsback', component:RetrieveContractsBackComponent},
+      {path: 'CommandeDetail', component:CommandeDetailComponent},
+
 
 
 
@@ -72,6 +79,7 @@ const routes: Routes = [
       {path: 'Detail/:id', component:DetailproductComponent},
       {path: 'Forum', component:HomeForumComponent},
       {path: 'Chat', component:ChatComponent},
+      {path: 'LigneCommande', component:LigneCommandeComponent},
 
     ]
   },
