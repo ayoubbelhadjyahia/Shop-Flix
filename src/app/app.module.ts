@@ -35,7 +35,22 @@ import { LivreurComponent } from './livreur/livreur.component';
 import { BestemployerComponent } from './bestemployer/bestemployer.component';
 import { AllLivraisonsfrontComponent } from './all-livraisonsfront/all-livraisonsfront.component';
 import { ToastrModule } from 'ngx-toastr';
+import { HomeBackForumComponent } from './Forum/home-back-forum/home-back-forum.component';
+import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
+import { DetailBackForumComponent } from './Forum/detail-back-forum/detail-back-forum.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import {ToastrModule} from "ngx-toastr";
+import { RetrieveMarketsBackComponent } from './User/retrieve-markets-back/retrieve-markets-back.component';
+import { RetrieveContractsBackComponent } from './User/retrieve-contracts-back/retrieve-contracts-back.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { RegisterComponent } from './User/register/register.component';
+import { VerificationComponent } from './User/verification/verification.component';
+import { NewPasswordComponent } from './User/new-password/new-password.component';
 
+import { LigneCommandeComponent } from './ligne-commande/ligne-commande.component';
+import { CommandeDetailComponent } from './commande-detail/commande-detail.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -70,8 +85,39 @@ import { ToastrModule } from 'ngx-toastr';
     LivreurComponent,
     BestemployerComponent,
     AllLivraisonsfrontComponent,
-   
-    
+    HomeBackForumComponent,
+    ChatPriveComponent,
+    DetailBackForumComponent,
+
+
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+      ToastrModule.forRoot(),
+
+    RetrieveMarketsBackComponent,
+    RetrieveContractsBackComponent,
+    NotFoundComponent,
+    AccueilComponent,
+    RegisterComponent,
+    VerificationComponent,
+    NewPasswordComponent,
+
+
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+    LigneCommandeComponent,
+    CommandeDetailComponent,
+
 
 
   ],
@@ -83,6 +129,10 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot()
 
   ],
+
+    NgxPaginationModule,
+    ],
+
   providers: [LivraisonService],
   bootstrap: [AppComponent]
 })

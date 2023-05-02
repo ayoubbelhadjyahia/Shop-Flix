@@ -29,11 +29,32 @@ import { NotFoundBackComponent } from './not-found-back/not-found-back.component
 import { LivreurComponent } from './livreur/livreur.component';
 import { BestemployerComponent } from './bestemployer/bestemployer.component';
 import { AllLivraisonsfrontComponent } from './all-livraisonsfront/all-livraisonsfront.component';
+import {HomeBackForumComponent} from "./Forum/home-back-forum/home-back-forum.component";
+import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
+import {DetailBackForumComponent} from "./Forum/detail-back-forum/detail-back-forum.component";
+
+import {RetrieveMarketsBackComponent} from "./User/retrieve-markets-back/retrieve-markets-back.component";
+import {RetrieveContractsBackComponent} from "./User/retrieve-contracts-back/retrieve-contracts-back.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
+import {AccueilComponent} from "./accueil/accueil.component";
+import {RegisterComponent} from "./User/register/register.component";
+import {VerificationComponent} from "./User/verification/verification.component";
+import {NewPasswordComponent} from "./User/new-password/new-password.component";
+
+import {LigneCommandeComponent} from "./ligne-commande/ligne-commande.component";
+import {CommandeDetailComponent} from "./commande-detail/commande-detail.component";
 
 
 
 const routes: Routes = [
+  {path:'Acceuil',component:AccueilComponent},
+  {path:'newpassword',component:NewPasswordComponent},
+
+  {path:'verification',component:VerificationComponent},
+
+  {path:'Error',component:NotFoundComponent},
   {path:'Login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
 
   {path:'admin',component:BackOfficeComponent,
     children: [
@@ -42,6 +63,7 @@ const routes: Routes = [
       {path:'addLivreur',component:LivreurComponent},
       {path:'retrieveAllLivreur',component:AllLivreurComponent},
       {path:'Commandeback',component:CommandebackComponent},
+      {path:'HomeBackForum',component:HomeBackForumComponent},
       {path:'Factureback',component:FacturebackComponent},
       {path:'Cartback',component:CartbackComponent},
       {path: 'addDelivery', component:LivraisonComponent},
@@ -55,6 +77,12 @@ const routes: Routes = [
       {path: '**', component:NotFoundBackComponent},
       
 
+      {path: 'backDF/:id', component:DetailBackForumComponent},
+      {path: 'retrievemarketsback', component:RetrieveMarketsBackComponent},
+      {path: 'retrievecontractsback', component:RetrieveContractsBackComponent},
+      {path: 'CommandeDetail', component:CommandeDetailComponent},
+
+
 
     ]
   },
@@ -63,6 +91,8 @@ const routes: Routes = [
       {path: '', component:HomeFrontComponent},
       {path:'addmydelivery',component:AllLivraisonsfrontComponent},
       {path: 'map',component:MapsComponent},
+      {path: 'Chat', component:ChatComponent},
+      {path: 'ChatP', component:ChatPriveComponent},
       {path:'Commande',component:CommandeComponent},
       {path:'Cart',component:CartComponent},
       {path:'Facture',component:FactureComponent},
@@ -71,7 +101,8 @@ const routes: Routes = [
       {path: 'Forum', component:HomeForumComponent},
       {path: 'Chat', component:ChatComponent},
       {path: '**', component:NotFoundComponent},
-      
+
+      {path: 'LigneCommande', component:LigneCommandeComponent},
 
     ]
   },

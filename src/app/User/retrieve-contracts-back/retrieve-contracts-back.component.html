@@ -1,0 +1,55 @@
+<section class="content" xmlns:paginate="http://www.w3.org/1999/xhtml"
+         xmlns:itemsPerPage="http://www.w3.org/1999/xhtml" xmlns:currentPage="http://www.w3.org/1999/xhtml">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">List Of Contracts</h3>
+  </div>
+  <!-- /.card-header -->
+  <div class="card-body">
+    <table id="example1" class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Duration</th>
+        <th>Pack Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Discount</th>
+        <th>Price</th>
+        <th>Actions</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let u of listContracts | paginate: { itemsPerPage: 1, currentPage: pages }; let i = index" >
+        <td>{{u.idContract}}</td>
+        <td>{{u.nbrMonths}}</td>
+        <td>{{u.packType}}</td>
+        <td>{{u.dateDebutContract}}</td>
+        <td>{{u.dateFinContract}}</td>
+        <td>{{u.discount}}</td>
+        <td>{{u.price}}</td>
+        <td><button type="button" class="btn-app">DELETE</button> <button [routerLink]="['../modifyusersback',u.idContract]" type="button" class="btn-app">SHOW</button> </td>
+      </tr>
+
+      </tbody>
+
+    </table>
+    <div  class="pagination-container">
+      <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="pages = $event"></pagination-controls></div>
+  </div>
+  <!-- /.card-body -->
+</div>
+<!-- /.card -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
