@@ -1,3 +1,7 @@
+
+export class Lignecommande {
+  idLigneCommande!:number;
+  quantiteProduit!:number;
 import {Product} from "../Product/Product";
 import {panier} from "./panier";
 

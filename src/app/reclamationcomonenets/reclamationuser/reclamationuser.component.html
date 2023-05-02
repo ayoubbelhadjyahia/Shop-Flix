@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="ag-format-container" xmlns="http://www.w3.org/1999/html">
+  <div class="ag-courses_box">
+    <div class="ag-courses_item" *ngFor="let item of listerec">
+      <div class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+        <div class="ag-courses-item_title">
+          Description de la reclamation {{item.description}}
+        </div>
+        <a class="media-body" routerLink="../detailsrec/{{item.idrec}}">Veuillez voir d autres information</a>
+        <div>
+        <a class="media-body" routerLink="../prodsimilaire/{{item.idrec}}" *ngIf="item.description===sujetrec1.produit">Veuillez voir le sproduits similaires à votre reclamation</a>
+        </div>
+          <button class="media-body"(click)="delete(item.idrec)">Supprimer la reclamtion </button>
+        <button class="media-body"(click)="editrec1(item)">editer la reclamation </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

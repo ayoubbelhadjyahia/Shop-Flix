@@ -1,0 +1,89 @@
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="main-body">
+
+    <!-- Breadcrumb -->
+
+
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card justify-content-center align-items-center">
+          <div class="card-body justify-content-center align-items-center">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img src= "../../../assets/images/panier.png"  class="rounded-circle" width="150">
+
+            </div>
+          </div>
+        </div>
+        <div class="card mt-3" >
+          <ul class="list-group list-group-flush">
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8"  >
+        <div class="card mb-3"  *ngFor="let item of listeproduct" >
+          <div class="card-body" >
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Nom de produit </h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{item.name}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Date expiration</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{item.dateExpiration}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">price</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{item.price}}
+              </div>
+            </div>
+            <hr>
+
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Taux de remise</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{item.tauxRemise }}
+              </div>
+            </div>
+            <hr>
+
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+

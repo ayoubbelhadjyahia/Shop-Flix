@@ -11,6 +11,7 @@ import { HomeFrontComponent} from "./home-front/home-front.component";
 import { LivraisonComponent } from './livraison/livraison.component';
 import { LivraisonService } from './Service/LivServ/livraison.service';
 import { AllLivraisonComponent } from './all-livraison/all-livraison.component';
+import { MeilleuremployeComponent } from './reclamationcomonenets/meilleuremploye/meilleuremploye.component';
 import { AllproductComponent } from './Product/allproduct/allproduct.component';
 import { DetailproductComponent } from './Product/detailproduct/detailproduct.component';
 import { BackproductComponent } from './Product/backproduct/backproduct.component';
@@ -27,6 +28,27 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {FacturebackComponent} from "./factureback/factureback.component";
 import {CommandebackComponent} from "./commandeback/commandeback.component";
 import {CartComponent} from "./cart/cart.component";
+import { ChartComponent } from './reclamationcomonenets/chart/chart.component';
+import { ChartsatisfactionComponent } from './reclamationcomonenets/chartsatisfaction/chartsatisfaction.component';
+import { ReclamationuserComponent } from './reclamationcomonenets/reclamationuser/reclamationuser.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import { DetailsreclamationComponent } from './reclamationcomonenets/detailsreclamation/detailsreclamation.component';
+import {RouterModule} from "@angular/router";
+import {ReclamationService} from "./reclamationservice/reclamation.service";
+import { ProduitsimilairesComponent } from './reclamationcomonenets/produitsimilaires/produitsimilaires.component';
+import { RetournesalaireComponent } from './reclamationcomonenets/retournesalaire/retournesalaire.component';
+import { GetrecComponent } from './reclamationcomonenets/getrec/getrec.component';
+import { EditrecComponent } from './reclamationcomonenets/editrec/editrec.component';
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
+import { ListeinterventionComponent } from './listeintervention/listeintervention.component';
+import { AddinterventionComponent } from './addintervention/addintervention.component';
+import { EditinterventionComponent } from './editintervention/editintervention.component';
+import { LgcommandesComponent } from './lgcommandes/lgcommandes.component';
+import { DetailsinterComponent } from './Detalslg/detailsinter.component';
+import { DetailslgComponent } from './detailslg/detailslg.component';
+=======
 import { MapsComponent } from './maps/maps.component';
 import { AllLivreurComponent } from './all-livreur/all-livreur.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -78,6 +100,37 @@ import {NgxPaginationModule} from "ngx-pagination";
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+    ChartComponent,
+    ChartsatisfactionComponent,
+    ReclamationuserComponent,
+    DetailsreclamationComponent,
+    ProduitsimilairesComponent,
+    RetournesalaireComponent,
+    GetrecComponent,
+    EditrecComponent,
+    ListeinterventionComponent,
+    AddinterventionComponent,
+    EditinterventionComponent,
+    LgcommandesComponent,
+    DetailsinterComponent,
+    DetailslgComponent,
+
+
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+      MatDialogModule,
+      BrowserAnimationsModule,
+      ToastrModule.forRoot(),
+      RouterModule
+
+
+    ],
+  providers: [LivraisonService, ReclamationService],
     MapsComponent,
     AllLivreurComponent,
     NotFoundComponent,
