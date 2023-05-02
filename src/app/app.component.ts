@@ -6,7 +6,7 @@ import {user} from "./Model/User/User";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'shop-Flix';
 
 

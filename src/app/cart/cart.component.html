@@ -1,27 +1,265 @@
-<section class="py-8">
+
+<section class="py-10">
   <div class="container">
-    <div class="row justify-space-between py-2">
-      <div class="card card-plain card-blog mt-5">
+    <div class="row">
+      <div class="col-lg-8 ms-auto me-auto">
         <div class="row">
-          <div class="col-md-4">
-            <div class="card-image position-relative border-radius-lg cursor-pointer">
-              <div class="blur-shadow-image">
-                <img class="img border-radius-lg" src="../../assets/img/examples/card-blog4.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-7 my-auto ms-md-3 mt-md-auto mt-4">
-            <p class="text-xs text-uppercase font-weight-bold text-gradient text-info mb-2">Startups</p>
-            <h3 class="text-dark cursor-pointer">Lyft launching cross-platform service this week</h3>
-            <p>
-              Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story — and <a href="javascript:;" class="text-dark"> Read More </a>
-            </p>
-            <div class="author">
-              <p class="mb-0">by<a class="ps-1 text-dark" href="javascript:;"><b>Megan Rose</b></a>, 2 days ago</p>
+          <div class="col-md-6 my-auto">
+            <div>
+
+              <span class="badge badge-sm badge-warning">Your order details </span>
             </div>
           </div>
         </div>
+
+        <hr class="dark horizontal">
+
+        <div class="d-flex">
+          <div *ngFor="let i of lignecommande">
+            <div *ngFor="let j of i.products">
+          <div>
+            <a href="javascript:;">
+              <div class="position-relative">
+                <div class="blur-shadow-avatar">
+                  <img class="avatar avatar-xxl border-radius-xl" src="../../assets/front/img/team-2.jpg">
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="ms-4 my-auto">
+            <h5></h5>
+            <p class="text-sm mb-0"> Your quantity :  {{i.quantiteProduit}} </p>
+            <br>
+            <p class="text-sm mb-0"> Your Final Price : {{j.price}} </p>
+
+          </div>
+<!--          <div class="my-auto d-md-block d-none ms-2">-->
+<!--            <button type="button" class="btn btn-dark pull-end mb-0">Delete</button>-->
+<!--          </div>-->
+              <button type="button" rel="tooltip" class="btn btn-danger btn-sm justify-content-sm-center" (click)="deleteLigneCommande(i.idLigneCommande)">
+              <i class="material-icons">close</i>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
+      <div class="d-flex justify-content-end mt-4">
+        <div class="my-auto ms-auto">
+          <button type="button" class="btn btn-primary " routerLink="/Commande">Confirm Your Order</button>
+        </div>
+        <div class="my-auto ms-auto">
+          <button type="button" class="btn btn-secondary" routerLink="/Product">Back To Shopping</button>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+<!--TEMPLATE-->
+<!--<section class="py-10">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-lg-8 ms-auto me-auto">-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-6 my-auto">-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <hr class="dark horizontal">-->
+
+<!--        <div class="d-flex">-->
+<!--          <div>-->
+<!--            <a href="javascript:;">-->
+<!--              <div class="position-relative">-->
+<!--                <div class="blur-shadow-avatar">-->
+<!--                  <img class="avatar avatar-xxl border-radius-xl" src="../../assets/img/team-2.jpg">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <div class="ms-4 my-auto">-->
+<!--            <div *ngFor="let i of lignecommande">-->
+
+<!--              <div *ngFor="let j of i.products">-->
+<!--            <h5>Product : {{j.name}} </h5>-->
+<!--            <p class="text-sm mb-0">Quantity</p><span class="badge bg-primary">{{i.quantiteProduit}}</span>-->
+<!--                <p class="text-sm mb-0">Price</p><span class="badge bg-primary">{{j.price}}</span>-->
+<!--               <br>-->
+<!--                <br>-->
+<!--          </div>-->
+
+<!--          <div class="my-auto d-md-block d-none ms-2">-->
+<!--            <button type="button" rel="tooltip" class="btn btn-danger">-->
+<!--              <i class="material-icons">close</i>-->
+<!--            </button>-->
+<!--            <br>-->
+<!--            <br>-->
+<!--            <br>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="my-auto d-md-none d-block ms-2">-->
+<!--          <button type="button" class="btn btn-dark mt-3">hh</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+
+<!--TEMPLATE EKHER-->
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; START HEADER 3 w/ image on background -&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<header>&ndash;&gt;-->
+<!--&lt;!&ndash;  <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent navbar-dark shadow-none">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="page-header min-vh-50" style="background-image: url(../../assets/front/img/bg0.jpg);" loading="lazy">&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="mask bg-gradient-dark opacity-4"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</header>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; END HEADER 3 w/ image on background -&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;body&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<section class="pt-5">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row justify-content-center">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-12 text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h2 class="text-gradient text-primary text-center">YOUR ORDER LIST</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p class="lead mb-5">Join the world&#39;s largest Marketplace</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-lg-10">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="table-responsive">&ndash;&gt;-->
+<!--&lt;!&ndash;          <table class="table table-pricing">&ndash;&gt;-->
+<!--&lt;!&ndash;            <thead class="text-light">&ndash;&gt;-->
+<!--&lt;!&ndash;            <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;              <th class="ps-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h6 class="mb-0">PRODUCT</h6>&ndash;&gt;-->
+<!--&lt;!&ndash;              </th>&ndash;&gt;-->
+<!--&lt;!&ndash;              <th class="text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h6 class="font-weight-bold"></h6>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="font-weight-bolder text-darker mb-0">Quantity</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;              </th>&ndash;&gt;-->
+<!--&lt;!&ndash;              <th class="text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h6 class="font-weight-bold"></h6>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="font-weight-bolder text-darker mb-0">Price</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;              </th>&ndash;&gt;-->
+<!--&lt;!&ndash;              <th class="text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h6 class="font-weight-bold">Yes/No</h6>&ndash;&gt;-->
+<!--&lt;!&ndash;              </th>&ndash;&gt;-->
+<!--&lt;!&ndash;            </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;            </thead>&ndash;&gt;-->
+<!--&lt;!&ndash;            <tbody>&ndash;&gt;-->
+<!--&lt;!&ndash;            <tr *ngFor="let i of lignecommande">&ndash;&gt;-->
+<!--&lt;!&ndash;              <div *ngFor="let j of i.products">&ndash;&gt;-->
+<!--&lt;!&ndash;              <td class="py-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="text-xs">{{j.name}}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;              </td>&ndash;&gt;-->
+<!--&lt;!&ndash;              <td class="text-center py-3">&ndash;&gt;-->
+<!--&lt;!&ndash;           <span class="text-xs">&ndash;&gt;-->
+<!--&lt;!&ndash;                   {{j.quantity}}&ndash;&gt;-->
+<!--&lt;!&ndash;                  </span>&ndash;&gt;-->
+<!--&lt;!&ndash;              </td>&ndash;&gt;-->
+<!--&lt;!&ndash;              <td class="text-center py-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <span class="text-xs">&ndash;&gt;-->
+<!--&lt;!&ndash;                   {{j.price}}&ndash;&gt;-->
+<!--&lt;!&ndash;                  </span>&ndash;&gt;-->
+<!--&lt;!&ndash;              </td>&ndash;&gt;-->
+<!--&lt;!&ndash;              <td class="text-center py-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <span class="text-xs">&ndash;&gt;-->
+<!--&lt;!&ndash;                  </span>&ndash;&gt;-->
+<!--&lt;!&ndash;              </td>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </tr>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;            <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              les bouttons&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;              <th class="border-bottom-0"></th>&ndash;&gt;-->
+<!--&lt;!&ndash;              <th class="text-center align-items-center border-bottom-0">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="javascript:;" class="btn btn-dark mt-3" routerLink="/Commande">Confirm Your Order</a>&ndash;&gt;-->
+<!--&lt;!&ndash;              </th>&ndash;&gt;-->
+
+<!--&lt;!&ndash;              <th class="text-center align-items-center border-bottom-0">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="javascript:;" class="btn bg-gradient-primary mt-3" routerLink="/Product">Back To Shopping </a>&ndash;&gt;-->
+<!--&lt;!&ndash;              </th>&ndash;&gt;-->
+<!--&lt;!&ndash;            </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;            </tbody>&ndash;&gt;-->
+<!--&lt;!&ndash;          </table>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</section>&ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;&lt;!&ndash;<section class="py-8">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <div class="container">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <div class="row justify-space-between py-2">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <div class="card card-plain card-blog mt-5">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="row">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <div class="col-md-4">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <div class="card-image position-relative border-radius-lg cursor-pointer">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              <div class="blur-shadow-image">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <img class="img border-radius-lg" src="../../assets/img/examples/card-blog4.jpg">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <div class="col-md-7 my-auto ms-md-3 mt-md-auto mt-4">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <p class="text-xs text-uppercase font-weight-bold text-gradient text-info mb-2">Startups</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <h3 class="text-dark cursor-pointer">Lyft launching cross-platform service this week</h3>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story — and <a href="javascript:;" class="text-dark"> Read More </a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            </p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <div class="author">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;              <p class="mb-0">by<a class="ps-1 text-dark" href="javascript:;"><b>Megan Rose</b></a>, 2 days ago</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</section>&ndash;&gt;&ndash;&gt;-->

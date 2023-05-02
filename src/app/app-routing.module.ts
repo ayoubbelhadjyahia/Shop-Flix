@@ -26,10 +26,29 @@ import {HomeBackForumComponent} from "./Forum/home-back-forum/home-back-forum.co
 import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
 import {DetailBackForumComponent} from "./Forum/detail-back-forum/detail-back-forum.component";
 
+import {RetrieveMarketsBackComponent} from "./User/retrieve-markets-back/retrieve-markets-back.component";
+import {RetrieveContractsBackComponent} from "./User/retrieve-contracts-back/retrieve-contracts-back.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
+import {AccueilComponent} from "./accueil/accueil.component";
+import {RegisterComponent} from "./User/register/register.component";
+import {VerificationComponent} from "./User/verification/verification.component";
+import {NewPasswordComponent} from "./User/new-password/new-password.component";
+
+import {LigneCommandeComponent} from "./ligne-commande/ligne-commande.component";
+import {CommandeDetailComponent} from "./commande-detail/commande-detail.component";
+
+
 
 
 const routes: Routes = [
+  {path:'Acceuil',component:AccueilComponent},
+  {path:'newpassword',component:NewPasswordComponent},
+
+  {path:'verification',component:VerificationComponent},
+
+  {path:'Error',component:NotFoundComponent},
   {path:'Login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
 
   {path:'admin',component:BackOfficeComponent,
     children: [
@@ -45,7 +64,12 @@ const routes: Routes = [
       {path: 'detailp/:id', component:AdmindetailComponent},
       {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+
       {path: 'backDF/:id', component:DetailBackForumComponent},
+      {path: 'retrievemarketsback', component:RetrieveMarketsBackComponent},
+      {path: 'retrievecontractsback', component:RetrieveContractsBackComponent},
+      {path: 'CommandeDetail', component:CommandeDetailComponent},
+
 
 
     ]
@@ -61,6 +85,8 @@ const routes: Routes = [
       {path: 'Product', component:AllproductComponent},
       {path: 'Detail/:id', component:DetailproductComponent},
       {path: 'Forum', component:HomeForumComponent},
+      {path: 'Chat', component:ChatComponent},
+      {path: 'LigneCommande', component:LigneCommandeComponent},
 
 
     ]
