@@ -22,6 +22,8 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {CommandeComponent} from "./commande/commande.component";
 import {FactureComponent} from "./facture/facture.component";
 import {CartComponent} from "./cart/cart.component";
+import {LigneCommandeComponent} from "./ligne-commande/ligne-commande.component";
+import {CommandeDetailComponent} from "./commande-detail/commande-detail.component";
 
 
 
@@ -41,6 +43,8 @@ const routes: Routes = [
       {path: 'detailp/:id', component:AdmindetailComponent},
       {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+      {path: 'CommandeDetail', component:CommandeDetailComponent},
+
 
 
     ]
@@ -55,6 +59,7 @@ const routes: Routes = [
       {path: 'Detail/:id', component:DetailproductComponent},
       {path: 'Forum', component:HomeForumComponent},
       {path: 'Chat', component:ChatComponent},
+      {path: 'LigneCommande', component:LigneCommandeComponent},
 
     ]
   },

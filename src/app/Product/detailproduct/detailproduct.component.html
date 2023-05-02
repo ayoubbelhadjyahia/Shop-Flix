@@ -793,7 +793,7 @@
 
 
 <header class="position-relative">
-  <div class="page-header min-vh-50 position-relative" style="background-image: url('../assets/img/bg6.jpg');" loading="lazy">
+  <div class="page-header min-vh-50 position-relative" style="background-image: url('/assets/front/img/bg6.jpg');" loading="lazy">
     <span class="mask bg-gradient-primary opacity-6"></span>
   </div>
 </header>
@@ -951,7 +951,13 @@
             </div>
             <div class="row mt-4">
               <div class="col-lg-4 ms-auto">
-                <button class="btn bg-gradient-primary mb-0 mt-lg-auto w-100" type="button" name="button">Add to cart</button>
+<!--                <button class="btn bg-gradient-primary mb-0 mt-lg-auto w-100" type="button" name="button">Add to cart</button>-->
+                <form>
+                  <label>Set Quantity</label>
+                  <input name="quantity" [(ngModel)]="ligneCommande.quantiteProduit">
+                </form>
+                <button class="btn bg-gradient-primary mb-0 mt-lg-auto w-100" type="button" name="button" (click)=" addToLigneCommande()">Add to cart</button>
+
               </div>
             </div>
           </div>
