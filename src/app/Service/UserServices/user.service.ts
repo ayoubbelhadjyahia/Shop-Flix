@@ -24,6 +24,7 @@ export class UserService {
     return this._http.put(`http://localhost:8188/SpringMVC/user/update`,user);
   }
   getUserUsername(username:string) : Observable<user>{
+    return this._http.get<user>(`http://localhost:8188/SpringMVC/user/username/`+username);
     return this._http.get<user>(`http://localhost:8188/SpringMVC/user/getusername/`+username);
 
   }

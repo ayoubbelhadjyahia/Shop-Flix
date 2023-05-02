@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BackOfficeComponent } from './back-office/back-office.component';
 import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
-
 import { HomeBackComponent} from "./home-back/home-back.component";
 import { HomeFrontComponent} from "./home-front/home-front.component";
 import { LivraisonComponent } from './livraison/livraison.component';
@@ -29,6 +28,11 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {FacturebackComponent} from "./factureback/factureback.component";
 import {CommandebackComponent} from "./commandeback/commandeback.component";
 import {CartComponent} from "./cart/cart.component";
+import { HomeBackForumComponent } from './Forum/home-back-forum/home-back-forum.component';
+import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
+import { DetailBackForumComponent } from './Forum/detail-back-forum/detail-back-forum.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import {ToastrModule} from "ngx-toastr";
 import { RetrieveMarketsBackComponent } from './User/retrieve-markets-back/retrieve-markets-back.component';
 import { RetrieveContractsBackComponent } from './User/retrieve-contracts-back/retrieve-contracts-back.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -68,6 +72,20 @@ import {NgxPaginationModule} from "ngx-pagination";
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+    HomeBackForumComponent,
+    ChatPriveComponent,
+    DetailBackForumComponent,
+
+
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+      ToastrModule.forRoot(),
+
     RetrieveMarketsBackComponent,
     RetrieveContractsBackComponent,
     NotFoundComponent,
@@ -95,7 +113,6 @@ import {NgxPaginationModule} from "ngx-pagination";
     HttpClientModule,
     FormsModule,
     NgxPaginationModule,
-
     ],
   providers: [LivraisonService],
   bootstrap: [AppComponent]

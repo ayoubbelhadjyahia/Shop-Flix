@@ -1,11 +1,12 @@
 import {Post} from "./Post";
 import {CommentLike} from "./CommentLike";
+import {user} from "../User/User";
 
 export class Comment {
   idComment!:number;
-  text!:String;
+  text!:string;
   commentDate!:Date;
-  user!:any;
+  user!:user;
   post!:Post
   commentLike!:CommentLike[];
 

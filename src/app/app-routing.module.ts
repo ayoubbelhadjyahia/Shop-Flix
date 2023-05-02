@@ -22,6 +22,9 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {CommandeComponent} from "./commande/commande.component";
 import {FactureComponent} from "./facture/facture.component";
 import {CartComponent} from "./cart/cart.component";
+import {HomeBackForumComponent} from "./Forum/home-back-forum/home-back-forum.component";
+import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
+import {DetailBackForumComponent} from "./Forum/detail-back-forum/detail-back-forum.component";
 
 import {RetrieveMarketsBackComponent} from "./User/retrieve-markets-back/retrieve-markets-back.component";
 import {RetrieveContractsBackComponent} from "./User/retrieve-contracts-back/retrieve-contracts-back.component";
@@ -51,6 +54,7 @@ const routes: Routes = [
     children: [
       {path: '', component:HomeBackComponent},
       {path:'Commandeback',component:CommandebackComponent},
+      {path:'HomeBackForum',component:HomeBackForumComponent},
       {path:'Factureback',component:FacturebackComponent},
       {path:'Cartback',component:CartbackComponent},
       {path: 'addDelivery', component:LivraisonComponent},
@@ -60,10 +64,11 @@ const routes: Routes = [
       {path: 'detailp/:id', component:AdmindetailComponent},
       {path: 'retrieveusersback', component:RetrieveUsersBackComponent},
       {path: 'modifyusersback/:id', component:ModifyUsersBackComponent},
+
+      {path: 'backDF/:id', component:DetailBackForumComponent},
       {path: 'retrievemarketsback', component:RetrieveMarketsBackComponent},
       {path: 'retrievecontractsback', component:RetrieveContractsBackComponent},
       {path: 'CommandeDetail', component:CommandeDetailComponent},
-
 
 
 
@@ -72,6 +77,8 @@ const routes: Routes = [
   {path:'',component:FrontOfficeComponent,
     children: [
       {path: '', component:HomeFrontComponent},
+      {path: 'Chat', component:ChatComponent},
+      {path: 'ChatP', component:ChatPriveComponent},
       {path:'Commande',component:CommandeComponent},
       {path:'Cart',component:CartComponent},
       {path:'Facture',component:FactureComponent},
@@ -80,6 +87,7 @@ const routes: Routes = [
       {path: 'Forum', component:HomeForumComponent},
       {path: 'Chat', component:ChatComponent},
       {path: 'LigneCommande', component:LigneCommandeComponent},
+
 
     ]
   },

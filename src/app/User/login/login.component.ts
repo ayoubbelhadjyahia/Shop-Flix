@@ -29,6 +29,11 @@ export class LoginComponent implements OnInit {
   }
   login(){
      return this._service.authenticateUser(this.authRequest).subscribe( data => {
+
+// Store the token in local storage
+       localStorage.setItem('token', data);
+    //   this.router.navigate(['']);
+     });
        localStorage.setItem('token',data);
        if(data) {
 
@@ -71,7 +76,6 @@ export class LoginComponent implements OnInit {
          }
        }
      );
-
 
   }
 
