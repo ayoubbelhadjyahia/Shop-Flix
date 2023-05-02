@@ -21,7 +21,10 @@ export class LoginComponent implements OnInit {
   }
   login(){
      return this._service.authenticateUser(this.authRequest).subscribe( data => {
-       this.router.navigate(['']);
+
+// Store the token in local storage
+       localStorage.setItem('token', data);
+    //   this.router.navigate(['']);
      });
   }
 

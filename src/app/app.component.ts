@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {user} from "./Model/User/User";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shop-Flix';
+
+
+  currentUser!:user;
 }

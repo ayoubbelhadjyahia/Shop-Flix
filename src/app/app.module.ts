@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BackOfficeComponent } from './back-office/back-office.component';
 import { FrontOfficeComponent } from './front-office/front-office.component';
 import { HomeForumComponent } from './Forum/home-forum/home-forum.component';
-
 import { HomeBackComponent} from "./home-back/home-back.component";
 import { HomeFrontComponent} from "./home-front/home-front.component";
 import { LivraisonComponent } from './livraison/livraison.component';
@@ -29,6 +28,11 @@ import {CartbackComponent} from "./cartback/cartback.component";
 import {FacturebackComponent} from "./factureback/factureback.component";
 import {CommandebackComponent} from "./commandeback/commandeback.component";
 import {CartComponent} from "./cart/cart.component";
+import { HomeBackForumComponent } from './Forum/home-back-forum/home-back-forum.component';
+import {ChatPriveComponent} from "./Forum/chat-prive/chat-prive.component";
+import { DetailBackForumComponent } from './Forum/detail-back-forum/detail-back-forum.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import {ToastrModule} from "ngx-toastr";
 
 
 @NgModule({
@@ -57,16 +61,20 @@ import {CartComponent} from "./cart/cart.component";
     LoginComponent,
     RetrieveUsersBackComponent,
     ModifyUsersBackComponent,
+    HomeBackForumComponent,
+    ChatPriveComponent,
+    DetailBackForumComponent,
 
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgxPaginationModule,
+      ToastrModule.forRoot(),
+    ],
   providers: [LivraisonService],
   bootstrap: [AppComponent]
 })
